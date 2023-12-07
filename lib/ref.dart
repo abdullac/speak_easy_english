@@ -388,204 +388,204 @@ class CustomeOutlinedButton extends StatelessWidget {
 
 // ______________________________________________
 
-class BeginnerPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Beginner Page'),
-        backgroundColor: Color(0xFF800000), // Maroon shade
-      ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // INTRODUCTION Section
-            _buildSectionTitle("INTRODUCTION"),
-            _buildIntroductionContent(),
-            _buildKnowledgeButton(),
+// class BeginnerPage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Beginner Page'),
+//         backgroundColor: Color(0xFF800000), // Maroon shade
+//       ),
+//       body: SingleChildScrollView(
+//         padding: EdgeInsets.all(16.0),
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             // INTRODUCTION Section
+//             _buildSectionTitle("INTRODUCTION"),
+//             _buildIntroductionContent(),
+//             _buildKnowledgeButton(),
 
-            // LEVELS Section
-            _buildSectionTitle("LEVELS"),
-            _buildContentText(
-              "Select the level you want to practice with words.",
-              visibility: 0.5,
-            ),
-            _buildLevelButtons(),
+//             // LEVELS Section
+//             _buildSectionTitle("LEVELS"),
+//             _buildContentText(
+//               "Select the level you want to practice with words.",
+//               visibility: 0.5,
+//             ),
+//             _buildLevelButtons(),
 
-            // SAMPLES Section
-            _buildSectionTitle("SAMPLES"),
-            _buildContentText(
-              "You can practice with sample items.",
-              visibility: 0.5,
-            ),
-            _buildImgBtnListView(),
+//             // SAMPLES Section
+//             _buildSectionTitle("SAMPLES"),
+//             _buildContentText(
+//               "You can practice with sample items.",
+//               visibility: 0.5,
+//             ),
+//             _buildImgBtnListView(),
 
-            // CHALLENGE Section
-            _buildSectionTitle("CHALLENGE"),
-            _buildContentText(
-              "Practice new English words.",
-              visibility: 0.5,
-            ),
-            _buildChallengeListView(),
-          ],
-        ),
-      ),
-    );
-  }
+//             // CHALLENGE Section
+//             _buildSectionTitle("CHALLENGE"),
+//             _buildContentText(
+//               "Practice new English words.",
+//               visibility: 0.5,
+//             ),
+//             _buildChallengeListView(),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
 
-  Widget _buildSectionTitle(String title) {
-    return Padding(
-      padding: EdgeInsets.only(top: 16.0, bottom: 8.0),
-      child: Text(
-        title,
-        style: TextStyle(
-            fontSize: 24.0,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF800000)),
-      ),
-    );
-  }
+//   Widget _buildSectionTitle(String title) {
+//     return Padding(
+//       padding: EdgeInsets.only(top: 16.0, bottom: 8.0),
+//       child: Text(
+//         title,
+//         style: TextStyle(
+//             fontSize: 24.0,
+//             fontWeight: FontWeight.bold,
+//             color: Color(0xFF800000)),
+//       ),
+//     );
+//   }
 
-  Widget _buildSubTitle(String title) {
-    return Padding(
-      padding: EdgeInsets.only(top: 12.0, bottom: 4.0),
-      child: Text(
-        title,
-        style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF009688)),
-      ),
-    );
-  }
+//   Widget _buildSubTitle(String title) {
+//     return Padding(
+//       padding: EdgeInsets.only(top: 12.0, bottom: 4.0),
+//       child: Text(
+//         title,
+//         style: TextStyle(
+//             fontSize: 20.0,
+//             fontWeight: FontWeight.bold,
+//             color: Color(0xFF009688)),
+//       ),
+//     );
+//   }
 
-  Widget _buildIntroductionContent() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _buildContentText(
-          "Understand what a beginner is and how to study in the Speak Easy English app. "
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-          visibility: 1.0,
-        ),
-      ],
-    );
-  }
+//   Widget _buildIntroductionContent() {
+//     return Column(
+//       crossAxisAlignment: CrossAxisAlignment.start,
+//       children: [
+//         _buildContentText(
+//           "Understand what a beginner is and how to study in the Speak Easy English app. "
+//           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+//           "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+//           visibility: 1.0,
+//         ),
+//       ],
+//     );
+//   }
 
-  Widget _buildContentText(String text, {double visibility = 1.0}) {
-    return Opacity(
-      opacity: visibility,
-      child: Text(
-        text,
-        style: TextStyle(fontSize: 16.0, color: Colors.black87),
-      ),
-    );
-  }
+//   Widget _buildContentText(String text, {double visibility = 1.0}) {
+//     return Opacity(
+//       opacity: visibility,
+//       child: Text(
+//         text,
+//         style: TextStyle(fontSize: 16.0, color: Colors.black87),
+//       ),
+//     );
+//   }
 
-  Widget _buildKnowledgeButton() {
-    return SizedBox(
-      width: double.infinity,
-      child: OutlinedButton(
-        onPressed: () {
-          // Handle button click
-        },
-        style: OutlinedButton.styleFrom(
-          side: BorderSide(color: Color(0xFF8BC34A)), // Lime shade
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-        ),
-        child: Text('KNOWLEDGE'),
-      ),
-    );
-  }
+//   Widget _buildKnowledgeButton() {
+//     return SizedBox(
+//       width: double.infinity,
+//       child: OutlinedButton(
+//         onPressed: () {
+//           // Handle button click
+//         },
+//         style: OutlinedButton.styleFrom(
+//           side: BorderSide(color: Color(0xFF8BC34A)), // Lime shade
+//           shape:
+//               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+//         ),
+//         child: Text('KNOWLEDGE'),
+//       ),
+//     );
+//   }
 
-  Widget _buildLevelButtons() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        _buildOutlinedButton("SINGLE"),
-        _buildOutlinedButton("DOUBLE"),
-        _buildOutlinedButton("TRIPLE"),
-      ],
-    );
-  }
+//   Widget _buildLevelButtons() {
+//     return Row(
+//       mainAxisAlignment: MainAxisAlignment.spaceAround,
+//       children: [
+//         _buildOutlinedButton("SINGLE"),
+//         _buildOutlinedButton("DOUBLE"),
+//         _buildOutlinedButton("TRIPLE"),
+//       ],
+//     );
+//   }
 
-  Widget _buildOutlinedButton(String text) {
-    return OutlinedButton(
-      onPressed: () {
-        // Handle button click
-      },
-      style: OutlinedButton.styleFrom(
-        side: BorderSide(color: Color(0xFF009688)), // Teal shade
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-      ),
-      child: Text(
-        text,
-        style: TextStyle(color: Color(0xFF009688)), // Teal shade
-      ),
-    );
-  }
+//   Widget _buildOutlinedButton(String text) {
+//     return OutlinedButton(
+//       onPressed: () {
+//         // Handle button click
+//       },
+//       style: OutlinedButton.styleFrom(
+//         side: BorderSide(color: Color(0xFF009688)), // Teal shade
+//         shape:
+//             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+//       ),
+//       child: Text(
+//         text,
+//         style: TextStyle(color: Color(0xFF009688)), // Teal shade
+//       ),
+//     );
+//   }
 
-  Widget _buildImgBtnListView() {
-    // Sample images
-    final btnBgImg = Image.network('https://via.placeholder.com/150',
-        width: 80.0, height: 80.0);
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: List.generate(
-          5, // Replace with the desired count
-          (index) => _buildCustomImgBtn(btnBgImg, 'Image $index'),
-        ),
-      ),
-    );
-  }
+//   Widget _buildImgBtnListView() {
+//     // Sample images
+//     final btnBgImg = Image.network('https://via.placeholder.com/150',
+//         width: 80.0, height: 80.0);
+//     return SingleChildScrollView(
+//       scrollDirection: Axis.horizontal,
+//       child: Row(
+//         children: List.generate(
+//           5, // Replace with the desired count
+//           (index) => _buildCustomImgBtn(btnBgImg, 'Image $index'),
+//         ),
+//       ),
+//     );
+//   }
 
-  Widget _buildCustomImgBtn(Image btnBgImg, String imgBtnText) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        border: Border.all(color: Color(0xFF800000)), // Maroon shade
-      ),
-      child: Column(
-        children: [
-          Container(
-            width: 100.0,
-            height: 100.0,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage('https://via.placeholder.com/150')),
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            // child: btnBgImg,
-          ),
-          if (imgBtnText != null) Text(imgBtnText),
-        ],
-      ),
-    );
-  }
+//   Widget _buildCustomImgBtn(Image btnBgImg, String imgBtnText) {
+//     return Container(
+//       margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+//       decoration: BoxDecoration(
+//         borderRadius: BorderRadius.circular(10.0),
+//         border: Border.all(color: Color(0xFF800000)), // Maroon shade
+//       ),
+//       child: Column(
+//         children: [
+//           Container(
+//             width: 100.0,
+//             height: 100.0,
+//             decoration: BoxDecoration(
+//               image: DecorationImage(
+//                   image: NetworkImage('https://via.placeholder.com/150')),
+//               borderRadius: BorderRadius.circular(10.0),
+//             ),
+//             // child: btnBgImg,
+//           ),
+//           if (imgBtnText != null) Text(imgBtnText),
+//         ],
+//       ),
+//     );
+//   }
 
-  Widget _buildChallengeListView() {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: 3, // Replace with the desired count
-      itemBuilder: (context, index) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildSubTitle("Challenge ${index + 1}"),
-            _buildImgBtnListView(),
-          ],
-        );
-      },
-    );
-  }
-}
+//   Widget _buildChallengeListView() {
+//     return ListView.builder(
+//       shrinkWrap: true,
+//       itemCount: 3, // Replace with the desired count
+//       itemBuilder: (context, index) {
+//         return Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             _buildSubTitle("Challenge ${index + 1}"),
+//             _buildImgBtnListView(),
+//           ],
+//         );
+//       },
+//     );
+//   }
+// }
 
 // ---------------------------------------------------
 

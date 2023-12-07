@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/strings.dart';
 
 class HomePageTitles extends StatelessWidget {
@@ -29,7 +30,7 @@ class HomePageTitle extends StatelessWidget {
     return Text(
       appName,
       style: const TextStyle(
-        color: Color.fromARGB(255, 128, 0, 17),
+        color: titleColor,
         fontSize: 24,
         fontWeight: FontWeight.w900,
       ),

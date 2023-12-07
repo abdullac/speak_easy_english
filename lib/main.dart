@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/home_page/page_home.dart';
+import 'package:speak_easy_english/ui/pages/beginner_page/page_beginner.dart';
+import 'package:speak_easy_english/ui/pages/introduction_page/page_introduction.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const PageHome(),
+      // home: const PageHome(),
+      home: PageBeginner(),
     );
   }
 }
