@@ -30,6 +30,7 @@ class ListItemImageTile extends StatelessWidget {
             ),
             // child: btnBgImg,
           ),
+          // listItemText != null ? Text(listItemText!) : SizedBox(),
           if (listItemText != null) Text(listItemText!),
         ],
       ),

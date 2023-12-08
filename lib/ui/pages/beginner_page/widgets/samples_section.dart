@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_content_text.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_image_listview.dart';
+import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_section_title.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/strings.dart';

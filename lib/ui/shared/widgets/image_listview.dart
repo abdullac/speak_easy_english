@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_imagetile.dart';
-
+import 'package:speak_easy_english/ui/shared/widgets/imagetile.dart';
 
 class ImageListView extends StatelessWidget {
-   ImageListView({
+  final String? itemText;
+  ImageListView({
     super.key,
+    this.itemText,
   });
 
   // Sample images
@@ -20,7 +21,7 @@ class ImageListView extends StatelessWidget {
           5, // Replace with the desired count
           (index) => ListItemImageTile(
             listItemImage: btnBgImg,
-            listItemText: 'Image $index',
+            listItemText: itemText != null ? '$itemText $index' : null,
           ),
         ),
       ),
