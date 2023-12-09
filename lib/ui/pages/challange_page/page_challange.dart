@@ -1,104 +1,63 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/widgets/icon_buttonwith_shadow.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/widgets/image_item_background.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/widgets/image_itgemname_button.dart';
-import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
-import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/ui/pages/challange_page/widgets/chat_message_box.dart';
+import 'package:speak_easy_english/ui/pages/challange_page/widgets/chat_textfield.dart';
+import 'package:speak_easy_english/ui/shared/widgets/icon_buttonwith_shadow.dart';
+import 'package:speak_easy_english/utils/constents/enums.dart';
 
-class SamplePage extends StatelessWidget {
-  const SamplePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    List<String> yourImageList = [
-      "assets/images/applesample.jpeg",
-      "assets/images/applesample.jpeg",
-      "assets/images/applesample.jpeg",
-    ];
-    return const Scaffold(
-      body: Stack(
-        children: [
-          // Background image
-          ImageItemBackground(),
-
-          // ImageListView
-          ImageListview(),
-
-          // WordText
-          ItemNameButton(),
-
-          // Icon Buttons
-          IconButtons(),
-        ],
-      ),
-    );
-  }
-}
-
-class ImageListview extends StatelessWidget {
-  const ImageListview({
-    super.key,
-  });
+class PageChallange extends StatelessWidget {
+  const PageChallange({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: 50.0, // Adjust as needed
-      left: 0,
-      right: 0,
-      child: Container(
-        decoration: const BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black26,
-              blurRadius: 5,
-            )
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Chat with Me'),
+        bottom: const PreferredSize(
+          preferredSize: Size(double.infinity, 5),
+          child: Text("You can speak to me"),
         ),
-        child: ImageListView(),
       ),
-    );
-  }
-}
-
-class ItemNameButton extends StatelessWidget {
-  const ItemNameButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Positioned(
-      left: 0,
-      right: 0,
-      bottom: 56.0,
-      child: Column(
+      body: Column(
         children: [
-          ImageItemNameButton(),
+          Expanded(
+            child: ListView(
+              children: const [
+                ChatMessageBox(chatMessageSide: ChatMessageSide.computerized),
+                ChatMessageBox(chatMessageSide: ChatMessageSide.user),
+                ChatMessageBox(chatMessageSide: ChatMessageSide.computerized),
+                ChatMessageBox(chatMessageSide: ChatMessageSide.user),
+                ChatMessageBox(chatMessageSide: ChatMessageSide.computerized),
+                ChatMessageBox(chatMessageSide: ChatMessageSide.user),
+                ChatMessageBox(chatMessageSide: ChatMessageSide.computerized),
+                ChatMessageBox(chatMessageSide: ChatMessageSide.user),
+                // Chat messages go here
+                // You can use ListTile or other widgets to display messages
+              ],
+            ),
+          ),
+          const Divider(height: 1.0),
+          bottomTextComposer(context),
         ],
       ),
     );
   }
-}
 
-class IconButtons extends StatelessWidget {
-  const IconButtons({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Positioned(
-      left: 12.0,
-      bottom: 12.0,
-      right: 12.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          IconButtonWithShadow(icon: Icons.volume_up),
-          IconButtonWithShadow(icon: Icons.mic),
-          IconButtonWithShadow(icon: Icons.mic_off),
-        ],
+  Widget bottomTextComposer(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(color: Theme.of(context).cardColor),
+      child: IconTheme(
+        data: const IconThemeData(color: Colors.red),
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: const Row(
+            children: [
+              IconButtonWithShadow(icon: Icons.mic),
+              ChatTextField(),
+              IconButtonWithShadow(icon: Icons.send),
+              IconButtonWithShadow(icon: Icons.volume_up),
+            ],
+          ),
+        ),
       ),
     );
   }

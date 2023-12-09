@@ -110,7 +110,7 @@ class CustomImageButton extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   imageWidget1,
-                  SizedBox(width: 8.0), // Adjust spacing as needed
+                  const SizedBox(width: 8.0), // Adjust spacing as needed
                   if (imageWidget2 != null)
                     SizedBox(
                       width: image2Size ?? 30.0,
@@ -119,10 +119,10 @@ class CustomImageButton extends StatelessWidget {
                     ),
                 ],
               ),
-              SizedBox(height: 8.0), // Adjust spacing as needed
+              const SizedBox(height: 8.0), // Adjust spacing as needed
               Text(
                 buttonText,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
             ],
           ),
@@ -147,14 +147,14 @@ class HomePage extends StatelessWidget {
         child: Container(
           width: double.infinity,
           height: MediaQuery.of(context).size.height * 0.8 * 0.8,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.yellowAccent, // Pastel Yellow Container
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(30),
               topRight: Radius.circular(30),
             ),
           ),
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -162,11 +162,11 @@ class HomePage extends StatelessWidget {
               Container(
                 width: 80,
                 height: 80,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.teal,
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.android,
                   color: Colors.white,
                   size: 40,
@@ -182,7 +182,7 @@ class HomePage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: Colors.teal, // Dark Teal Button Color
                   ),
-                  child: Text(
+                  child: const Text(
                     'CONTINUE',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -199,12 +199,12 @@ class HomePage extends StatelessWidget {
                     // Add your button functionality here
                   },
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(
+                    side: const BorderSide(
                       width: 3, // Thickest Outline Width
                       color: Colors.teal, // Dark Teal Outline Color
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'GET PRO',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -246,7 +246,7 @@ class HomePage2 extends StatelessWidget {
           Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -271,7 +271,7 @@ class HomePage2 extends StatelessWidget {
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.8,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                   ),
@@ -289,7 +289,7 @@ class HomePage2 extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text(
+                        const Text(
                           'SPEAK EASY ENGLISH',
                           style: TextStyle(
                             color: Color.fromARGB(255, 128, 0, 17),
@@ -297,7 +297,7 @@ class HomePage2 extends StatelessWidget {
                             fontWeight: FontWeight.w900,
                           ),
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text(
                           'Malayalam to English',
                           style: TextStyle(
@@ -307,17 +307,17 @@ class HomePage2 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     Column(
                       children: [
-                        CustomeOutlinedButton(btnText: "BEGINNER"),
-                        CustomeOutlinedButton(btnText: "INTERMEDIATE"),
-                        CustomeOutlinedButton(btnText: "ADVANCED"),
-                        SizedBox(height: 8),
+                        const CustomeOutlinedButton(btnText: "BEGINNER"),
+                        const CustomeOutlinedButton(btnText: "INTERMEDIATE"),
+                        const CustomeOutlinedButton(btnText: "ADVANCED"),
+                        const SizedBox(height: 8),
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 128, 0,
+                            backgroundColor: const Color.fromARGB(255, 128, 0,
                                 17), // Same color as CONTINUE button
                           ),
                           child: Text(
@@ -330,7 +330,7 @@ class HomePage2 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
@@ -367,14 +367,14 @@ class CustomeOutlinedButton extends StatelessWidget {
       child: OutlinedButton(
         onPressed: () {},
         style: OutlinedButton.styleFrom(
-          side: BorderSide(
+          side: const BorderSide(
             color: Color.fromARGB(255, 128, 0, 17),
             width: 3,
           ),
         ),
         child: Text(
           btnText,
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.w900,
             color: Color.fromARGB(255, 128, 0, 17),
           ),
@@ -594,11 +594,11 @@ class KnowledgePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Development'),
+        title: const Text('Flutter Development'),
         backgroundColor: Colors.teal, // Teal color for app bar
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -621,7 +621,7 @@ class KnowledgePage extends StatelessWidget {
                 // Malayalam Subsection
                 SubSectionWidget(
                   title: 'Malayalam',
-                  color: Color(0xFF8E354A), // Maroon shade
+                  color: const Color(0xFF8E354A), // Maroon shade
                   children: [
                     ContentTextWidget(
                       text:
@@ -665,14 +665,14 @@ class SectionWidget extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 24.0,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         ...children,
-        SizedBox(height: 16.0),
+        const SizedBox(height: 16.0),
       ],
     );
   }
@@ -689,8 +689,8 @@ class SubSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 8.0),
-      padding: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(8.0),
@@ -700,13 +700,13 @@ class SubSectionWidget extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 8.0),
+          const SizedBox(height: 8.0),
           ...children,
         ],
       ),
@@ -723,7 +723,7 @@ class ContentTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: 16.0),
+      style: const TextStyle(fontSize: 16.0),
     );
   }
 }
@@ -733,7 +733,7 @@ class TextFieldWithMicWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: TextField(
             decoration: InputDecoration(
               hintText: 'Type here...',
@@ -741,7 +741,7 @@ class TextFieldWithMicWidget extends StatelessWidget {
           ),
         ),
         IconButton(
-          icon: Icon(Icons.mic),
+          icon: const Icon(Icons.mic),
           onPressed: () {
             // Handle mic button press
           },
@@ -793,7 +793,7 @@ class ImageListItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(8.0),
       child: Column(
         children: [
           Image.asset(
@@ -802,7 +802,7 @@ class ImageListItemWidget extends StatelessWidget {
             width: 60.0,
             fit: BoxFit.cover,
           ),
-          SizedBox(height: 4.0),
+          const SizedBox(height: 4.0),
           Text(text),
         ],
       ),
@@ -844,7 +844,7 @@ class SamplePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Container(
                     width: 40, height: 70,
-                    margin: EdgeInsets.only(right: 16.0), // Adjust spacing
+                    margin: const EdgeInsets.only(right: 16.0), // Adjust spacing
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       image: DecorationImage(
@@ -860,7 +860,7 @@ class SamplePage extends StatelessWidget {
           ),
 
           // WordText
-          Positioned(
+          const Positioned(
             left: 0,
             right: 0,
             bottom: 56.0,
@@ -879,7 +879,7 @@ class SamplePage extends StatelessWidget {
             left: 16.0,
             bottom: 16.0,
             child: IconButton(
-              icon: Icon(Icons.volume_up),
+              icon: const Icon(Icons.volume_up),
               onPressed: () {
                 // Add your volume button functionality here
               },
@@ -892,7 +892,7 @@ class SamplePage extends StatelessWidget {
             right: 0,
             bottom: 16.0,
             child: IconButton(
-              icon: Icon(Icons.mic),
+              icon: const Icon(Icons.mic),
               onPressed: () {
                 // Add your mic button functionality here
               },
@@ -904,7 +904,7 @@ class SamplePage extends StatelessWidget {
             right: 16.0,
             bottom: 16.0,
             child: IconButton(
-              icon: Icon(Icons.mic_off), // Change icon as needed
+              icon: const Icon(Icons.mic_off), // Change icon as needed
               onPressed: () {
                 // Add your auto mic button functionality here
               },
@@ -927,12 +927,12 @@ class ConnectPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Abdulla's name
-            Text(
+            const Text(
               'Abdulla',
               style: TextStyle(
                 fontSize: 32.0,
@@ -942,7 +942,7 @@ class ConnectPage extends StatelessWidget {
             ),
 
             // Flutter Developer
-            Text(
+            const Text(
               'Flutter Developer',
               style: TextStyle(
                 fontSize: 18.0,
@@ -952,8 +952,8 @@ class ConnectPage extends StatelessWidget {
 
             // Connect Section
             Container(
-              margin: EdgeInsets.symmetric(vertical: 20.0),
-              child: Column(
+              margin: const EdgeInsets.symmetric(vertical: 20.0),
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Contact Information
@@ -995,38 +995,38 @@ class ConnectPage extends StatelessWidget {
 
             // Message Me Section
             Container(
-              margin: EdgeInsets.symmetric(vertical: 20.0),
+              margin: const EdgeInsets.symmetric(vertical: 20.0),
               child: Column(
                 children: [
                   // Text Fields for Message
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Name',
                     ),
                   ),
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Contact Number',
                     ),
                   ),
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Email',
                     ),
                   ),
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Message',
                     ),
                   ),
 
                   // Submit Button
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   ElevatedButton(
                     onPressed: () {
                       // Add code to handle form submission
                     },
-                    child: Text('Submit'),
+                    child: const Text('Submit'),
                   ),
                 ],
               ),
@@ -1051,12 +1051,12 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Abdulla's name
-            Text(
+            const Text(
               'Abdulla',
               style: TextStyle(
                 fontSize: 32.0,
@@ -1066,7 +1066,7 @@ class AboutPage extends StatelessWidget {
             ),
 
             // Flutter Developer
-            Text(
+            const Text(
               'Flutter Developer',
               style: TextStyle(
                 fontSize: 18.0,
@@ -1076,8 +1076,8 @@ class AboutPage extends StatelessWidget {
 
             // About Section
             Container(
-              margin: EdgeInsets.symmetric(vertical: 20.0),
-              child: Text(
+              margin: const EdgeInsets.symmetric(vertical: 20.0),
+              child: const Text(
                 'As a self-taught Flutter developer, I have honed my skills in creating cross-platform applications for various devices. My journey involves crafting responsive applications and earning extensive technology-based knowledge through the development of numerous interesting apps. I am passionate about building innovative applications that contribute to the world of technology.',
                 style: TextStyle(
                   fontSize: 16.0,
@@ -1107,14 +1107,14 @@ class HomePage3 extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // About Section
               Container(
-                margin: EdgeInsets.only(bottom: 20.0),
-                child: Text(
+                margin: const EdgeInsets.only(bottom: 20.0),
+                child: const Text(
                   'As a passionate Flutter developer, I specialize in creating cross-platform applications that are not only responsive but also innovative. My journey as a self-taught developer has equipped me with a wealth of technology-based knowledge, gained through the creation of several intriguing apps. I am enthusiastic about building applications that cater to various devices.',
                   style: TextStyle(
                     fontSize: 16.0,
@@ -1126,11 +1126,11 @@ class HomePage3 extends StatelessWidget {
         
               // Portfolio Section
               Container(
-                margin: EdgeInsets.only(top: 20.0),
+                margin: const EdgeInsets.only(top: 20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Portfolio',
                       style: TextStyle(
                         fontSize: 24.0,
@@ -1139,7 +1139,7 @@ class HomePage3 extends StatelessWidget {
                         // Add other text styling properties as needed
                       ),
                     ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
         
                     // Netflix App Clone
                     PortfolioItem(
@@ -1183,12 +1183,12 @@ class PortfolioItem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 10.0),
+        const SizedBox(height: 10.0),
 
         // Portfolio Item Title
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18.0,
             fontWeight: FontWeight.bold,
             color: Colors.black,
@@ -1198,7 +1198,7 @@ class PortfolioItem extends StatelessWidget {
 
         // Portfolio Item Screenshot
         Container(
-          margin: EdgeInsets.symmetric(vertical: 10.0),
+          margin: const EdgeInsets.symmetric(vertical: 10.0),
           height: 150.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
@@ -1223,13 +1223,13 @@ class HomePage5 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Abdulla's name
-            Text(
+            const Text(
               'Abdulla',
               style: TextStyle(
                 fontSize: 32.0,
@@ -1240,7 +1240,7 @@ class HomePage5 extends StatelessWidget {
             ),
 
             // Flutter Developer
-            Text(
+            const Text(
               'Flutter Developer',
               style: TextStyle(
                 fontSize: 18.0,
@@ -1250,7 +1250,7 @@ class HomePage5 extends StatelessWidget {
             ),
 
             // Quote
-            Text(
+            const Text(
               'Your inspiring quote here',
               style: TextStyle(
                 fontSize: 16.0,
@@ -1262,10 +1262,10 @@ class HomePage5 extends StatelessWidget {
 
             // Sample Photo
             Container(
-              margin: EdgeInsets.symmetric(vertical: 16.0),
+              margin: const EdgeInsets.symmetric(vertical: 16.0),
               height: 200.0,
               width: 200.0,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: NetworkImage('URL_TO_YOUR_SAMPLE_PHOTO'),
@@ -1294,16 +1294,16 @@ class HomePage6 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Abdulla\'s Website'),
+        title: const Text('Abdulla\'s Website'),
         actions: [
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: () {
               // Add code for drawer open
             },
           ),
           IconButton(
-            icon: Icon(Icons.link),
+            icon: const Icon(Icons.link),
             onPressed: () {
               // Add code to go to LinkedIn website
             },
@@ -1314,13 +1314,13 @@ class HomePage6 extends StatelessWidget {
         child: ListView(
           children: [
             ListTile(
-              title: Text('Home'),
+              title: const Text('Home'),
               onTap: () {
                 // Add code to navigate to Home section
               },
             ),
             ListTile(
-              title: Text('About'),
+              title: const Text('About'),
               onTap: () {
                 // Add code to navigate to About section
               },
@@ -1330,14 +1330,14 @@ class HomePage6 extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Home Section
             Container(
               // Add styling properties as needed (padding, margin, color, etc.)
-              child: Column(
+              child: const Column(
                 children: [
                   Text(
                     'Abdulla',
@@ -1359,7 +1359,7 @@ class HomePage6 extends StatelessWidget {
             // About Section
             Container(
               // Add styling properties
-              child: Text(
+              child: const Text(
                 'Your about text or content',
                 style: TextStyle(
                   // Add text styling properties
@@ -1373,7 +1373,7 @@ class HomePage6 extends StatelessWidget {
             // Ethics Section
             Container(
               // Add styling properties
-              child: Text(
+              child: const Text(
                 'Your work ethics content',
                 style: TextStyle(
                   // Add text styling properties
@@ -1387,7 +1387,7 @@ class HomePage6 extends StatelessWidget {
             // Hire Me Section
             Container(
               // Add styling properties
-              child: Column(
+              child: const Column(
                 children: [
                   Text(
                     'I want a job as a Flutter developer',
@@ -1403,7 +1403,7 @@ class HomePage6 extends StatelessWidget {
             // Connect Section
             Container(
               // Add styling properties
-              child: Column(
+              child: const Column(
                 children: [
                   Text(
                     'Contact me:',
@@ -1422,7 +1422,7 @@ class HomePage6 extends StatelessWidget {
             // Footer Section
             Container(
               // Add styling properties
-              child: Text(
+              child: const Text(
                 'Created by Me, Copyright 2023 All rights reserved',
                 style: TextStyle(
                   // Add text styling properties
@@ -1436,7 +1436,7 @@ class HomePage6 extends StatelessWidget {
         onPressed: () {
           // Add code to scroll to the Home section
         },
-        child: Icon(Icons.arrow_upward),
+        child: const Icon(Icons.arrow_upward),
       ),
     );
   }
@@ -1458,7 +1458,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat with Friend'),
+        title: const Text('Chat with Friend'),
       ),
       body: Column(
         children: [
@@ -1488,12 +1488,12 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Widget _buildInputArea() {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
           // Clear button
           IconButton(
-            icon: Icon(Icons.clear),
+            icon: const Icon(Icons.clear),
             onPressed: () {
               _messageController.clear();
             },
@@ -1502,14 +1502,14 @@ class _ChatScreenState extends State<ChatScreen> {
           Expanded(
             child: TextField(
               controller: _messageController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Type a message',
               ),
             ),
           ),
           // Send button
           IconButton(
-            icon: Icon(Icons.send),
+            icon: const Icon(Icons.send),
             onPressed: () {
               // Handle send button press
               String message = _messageController.text;
@@ -1519,7 +1519,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           // Mic icon button
           IconButton(
-            icon: Icon(Icons.mic),
+            icon: const Icon(Icons.mic),
             onPressed: () {
               // Handle mic button press
               print('Mic button pressed');
@@ -1527,7 +1527,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           // Volume on/off button
           IconButton(
-            icon: Icon(Icons.volume_up),
+            icon: const Icon(Icons.volume_up),
             onPressed: () {
               // Handle volume button press
               print('Volume button pressed');
@@ -1549,7 +1549,7 @@ class ChatScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat with Friend'),
+        title: const Text('Chat with Friend'),
       ),
       body: Column(
         children: [
@@ -1561,7 +1561,7 @@ class ChatScreen2 extends StatelessWidget {
               ],
             ),
           ),
-          Divider(height: 1.0),
+          const Divider(height: 1.0),
           Container(
             decoration: BoxDecoration(color: Theme.of(context).cardColor),
             child: _buildTextComposer(),
@@ -1573,14 +1573,14 @@ class ChatScreen2 extends StatelessWidget {
 
   Widget _buildTextComposer() {
     return IconTheme(
-      data: IconThemeData(color: Colors.red),
+      data: const IconThemeData(color: Colors.red),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
           children: [
             // Mic icon button
             IconButton(
-              icon: Icon(Icons.mic),
+              icon: const Icon(Icons.mic),
               onPressed: () {
                 // Handle mic button press
               },
@@ -1593,21 +1593,21 @@ class ChatScreen2 extends StatelessWidget {
                 onSubmitted: (text) {
                   // Handle text submitted
                 },
-                decoration: InputDecoration.collapsed(
+                decoration: const InputDecoration.collapsed(
                   hintText: 'Send a message',
                 ),
               ),
             ),
             // Send button
             IconButton(
-              icon: Icon(Icons.send),
+              icon: const Icon(Icons.send),
               onPressed: () {
                 // Handle send button press
               },
             ),
             // Volume on/off button
             IconButton(
-              icon: Icon(Icons.volume_up),
+              icon: const Icon(Icons.volume_up),
               onPressed: () {
                 // Handle volume button press
               },
@@ -1634,13 +1634,13 @@ class PhotoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Photo Page'),
+        title: const Text('My Photo Page'),
       ),
       body: Center(
         child: CachedNetworkImage(
           imageUrl: photoUrl,
-          placeholder: (context, url) => CircularProgressIndicator(),
-          errorWidget: (context, url, error) => Icon(Icons.error),
+          placeholder: (context, url) => const CircularProgressIndicator(),
+          errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
       ),
     );

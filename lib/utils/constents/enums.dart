@@ -1,0 +1,4 @@
+enum ChatMessageSide {
+  computerized,
+  user,
+}
