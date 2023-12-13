@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ref.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/page_beginner.dart';
 import 'package:speak_easy_english/ui/pages/challange_page/page_challange.dart';
+import 'package:speak_easy_english/ui/pages/knowledge_page/page_knowledge.dart';
 import 'package:speak_easy_english/ui/pages/sample_page/page_sample.dart';
 import 'package:speak_easy_english/ui/pages/introduction_page/page_introduction.dart';
 
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const PageHome(),
-      home: const PageChallange(),
+      home:  const PageKnowledge(),
     );
   }
 }

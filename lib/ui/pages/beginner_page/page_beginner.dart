@@ -22,56 +22,25 @@ class PageBeginner extends StatelessWidget {
     );
     return Scaffold(
       appBar: appBar2,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // LEVELS Section
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: const Color.fromARGB(255, 255, 221, 221),
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SectionTitle(title: "LEVELS"),
-                  ContentText(
-                    text: beginnerLevelsContent,
-                  ),
-                  LevelButtons(),
-                ],
-              ),
-            ),
+            LevelsSection(),
 
-            const SizedBox(
+            SizedBox(
               height: 12,
             ),
             // SAMPLES Section
-            const SamplesSection(),
+            SamplesSection(),
 
-            const SizedBox(
+            SizedBox(
               height: 12,
             ),
             // CHALLENGE Section
-            Container(
-              decoration: const BoxDecoration(
-                  color: Colors.teal,
-                  // border: Border.all(color: appBarColor),
-                  borderRadius: BorderRadius.all(Radius.circular(12))),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SectionTitle(title: "CHALLENGE"),
-                  ContentText(
-                    text: beginnerChallengeContgent,
-                  ),
-                  const ChallengeListView(),
-                ],
-              ),
-            ),
+            ChallangeSection(),
           ],
         ),
       ),
@@ -91,4 +60,57 @@ class PageBeginner extends StatelessWidget {
   //     ],
   //   );
   // }
+}
+
+class LevelsSection extends StatelessWidget {
+  const LevelsSection({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: const Color.fromARGB(255, 255, 221, 221),
+      ),
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SectionTitle(title: "LEVELS"),
+          ContentText(
+            text: beginnerLevelsContent,
+          ),
+          LevelButtons(),
+        ],
+      ),
+    );
+  }
+}
+
+class ChallangeSection extends StatelessWidget {
+  const ChallangeSection({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+          color: Colors.teal,
+          // border: Border.all(color: appBarColor),
+          borderRadius: BorderRadius.all(Radius.circular(12))),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SectionTitle(title: "CHALLENGE"),
+          ContentText(
+            text: beginnerChallengeContgent,
+          ),
+          const ChallengeListView(),
+        ],
+      ),
+    );
+  }
 }
