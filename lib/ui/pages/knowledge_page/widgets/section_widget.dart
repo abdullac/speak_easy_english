@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/ui/shared/widgets/section_title.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/spaces.dart';
 
 class SectionWidget extends StatelessWidget {
   final String title;
@@ -18,23 +20,16 @@ class SectionWidget extends StatelessWidget {
       decoration: BoxDecoration(
         // color: Colors.grey.shade300,
         // color: lightMaroon,
-        color: lightYellowe,
+        color: lightYellow,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 24.0,
-              fontWeight: FontWeight.bold,
-              color: maroon,
-            ),
-          ),
-          const SizedBox(height: 8.0),
+          SectionTitle(title: title),
+          // spaceV8,
           ...children,
-          const SizedBox(height: 16.0),
+          // spaceV16,
         ],
       ),
     );

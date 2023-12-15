@@ -3,6 +3,7 @@ import 'package:speak_easy_english/ui/pages/knowledge_page/page_knowledge.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/content_text_widget.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/section_widget.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/sub_section_widget.dart';
+import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 
 class SpeakWordSection extends StatelessWidget {
@@ -25,7 +26,8 @@ class SpeakWordSection extends StatelessWidget {
             const ContentTextWidget(
               text: "മലയാളം സാധാരണമായ മാധ്യമങ്ങളിലൂടെ പ്രചരിക്കുന്ന ഒരു ഭാഷ...",
             ),
-            ImageListViewWidget(),
+            // ImageListViewWidget(),
+            ImageListView(itemText: "Sample Text"),
           ],
         ),
 
@@ -39,7 +41,8 @@ class SpeakWordSection extends StatelessWidget {
               text:
                   "English is a widely spoken language with a rich literary tradition...",
             ),
-            ImageListViewWidget(),
+            // ImageListViewWidget(),
+            ImageListView(itemText: "Text"),
           ],
         ),
       ],

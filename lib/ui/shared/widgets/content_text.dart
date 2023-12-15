@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
 
 
 class ContentText extends StatelessWidget {
@@ -11,14 +12,11 @@ class ContentText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Opacity(
       opacity: 0.7,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 4.0),
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontSize: 16.0,
-            color: Colors.black87,
-          ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontSize: 16.0,
+          color: greyscale,
         ),
       ),
     );

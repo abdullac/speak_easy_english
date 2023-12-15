@@ -5,6 +5,18 @@ const titleColor = Color.fromARGB(255, 128, 0, 17);
 
 
 
+const Color maroon = Color.fromARGB(255, 128, 0, 0);
+const Color lightMaroon = Color.fromARGB(255, 253, 211, 211);
+const Color darkMaroon = Color.fromARGB(255, 128, 0, 30);
+const Color teal = Color.fromARGB(255, 0, 128, 128);
+const Color lightTeal = Color.fromARGB(255, 217, 233, 233);
+const Color greyscale = Color.fromARGB(255, 38, 38, 38);
+const Color lightGreyscale = Color.fromARGB(255, 230, 230, 230);
+const Color lightYellow = Color.fromARGB(255, 255, 255, 204);
+ Color limeYellow = Colors.lime.shade300;
+
+
+
 // ----------------------------------------------
 // const Color greyScale = Color.fromARGB(255, 38, 38, 38);
 // const Color lightYellow = Color.fromARGB(255, 255, 255, 224);
@@ -14,17 +26,9 @@ const titleColor = Color.fromARGB(255, 128, 0, 17);
 // const Color teal80 = Color.fromARGB(255, 0, 128, 64);
 // --------------------------------------------------
 
-
-const Color maroon = Color.fromARGB(255, 128, 0, 0);
 // const Color lightMaroon = Color.fromARGB(255, 255, 128, 128);
 // const Color lightMaroon = Color.fromARGB(255, 255, 179, 179);
-const Color lightMaroon = Color.fromARGB(255, 253, 211, 211);
-const Color teale = Color.fromARGB(255, 0, 128, 128);
 // const Color lightTeal = Color.fromARGB(255, 0, 230, 230);
-const Color lightTeal = Color.fromARGB(255, 217, 233, 233);
-const Color greyscale = Color.fromARGB(255, 38, 38, 38);
-const Color lightGreyscale = Color.fromARGB(255, 230, 230, 230);
-const Color lightYellowe = Color.fromARGB(255, 255, 255, 204);
 // const Color greyScale = Color.fromARGB(255, 128, 0, 0);
 // const Color greyScale = Color.fromARGB(255, 128, 0, 0);
 

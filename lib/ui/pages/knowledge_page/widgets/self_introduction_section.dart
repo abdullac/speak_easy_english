@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/content_text_widget.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/section_widget.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/paddings.dart';
+import 'package:speak_easy_english/utils/constents/spaces.dart';
 
 class SelfIntroduceSection extends StatelessWidget {
   const SelfIntroduceSection({
@@ -17,7 +19,7 @@ class SelfIntroduceSection extends StatelessWidget {
           text: "സ്വയം പരിചയപ്പെടുത്തുക: സ്വന്തം കുറിപ്പ് ഇങ്ങനെയാണ്...",
         ),
         Container(
-          padding: const EdgeInsets.all(4),
+          padding: paddingAll4,
           decoration: BoxDecoration(
             // color: Colors.teal.shade400,
 
@@ -40,9 +42,7 @@ class SelfIntroduceSection extends StatelessWidget {
                       "User spoken words in malayalam\nfdsgfdg\nssdfgfsdgfdg\ngertgdfgfdgdf\ngddfgdfgdfg"),
                 ),
               ),
-              const SizedBox(
-                height: 4,
-              ),
+              spaceV4,
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -55,24 +55,24 @@ class SelfIntroduceSection extends StatelessWidget {
                     label: const Text(
                       "TAKE INTRODUCTION",
                       style: TextStyle(
-                        color: lightYellowe,
+                        color: lightYellow,
                       ),
                     ),
                     style: const ButtonStyle(
                       // backgroundColor: MaterialStatePropertyAll(maroon),
-                      backgroundColor: MaterialStatePropertyAll(teale),
+                      backgroundColor: MaterialStatePropertyAll(teal),
                     ),
                   ),
                   ElevatedButton(
                     onPressed: () {},
                     style: const ButtonStyle(
                       // backgroundColor: MaterialStatePropertyAll(maroon),
-                      backgroundColor: MaterialStatePropertyAll(teale),
+                      backgroundColor: MaterialStatePropertyAll(teal),
                     ),
                     child: const Text(
                       "HELP",
                       style: TextStyle(
-                        color: lightYellowe,
+                        color: lightYellow,
                       ),
                     ),
                   ),

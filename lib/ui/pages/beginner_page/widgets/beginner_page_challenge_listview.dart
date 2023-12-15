@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_sub_title.dart';
+import 'package:speak_easy_english/utils/constents/border_radius.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 
 class ChallengeListView extends StatelessWidget {
@@ -18,14 +19,18 @@ class ChallengeListView extends StatelessWidget {
           margin: const EdgeInsets.only(
             top: 10,
             bottom: 5,
-            left: 3,
+            left: 2,
           ),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 163, 248, 240),
-              Colors.teal,
-            ]),
-            borderRadius: BorderRadius.all(Radius.circular(12)),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [
+                teal,
+                lightMaroon,
+              ],
+              begin: Alignment.topRight,
+              end: Alignment.bottomCenter
+            ),
+            borderRadius: borderRadius12,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

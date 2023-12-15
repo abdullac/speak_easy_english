@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/pages/home_page/widgets/home_page_buttons.dart';
 import 'package:speak_easy_english/ui/pages/home_page/widgets/home_page_footer.dart';
 import 'package:speak_easy_english/ui/pages/home_page/widgets/home_page_titles.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/spaces.dart';
 
 class HomePageForeground extends StatelessWidget {
   const HomePageForeground({
@@ -15,7 +17,7 @@ class HomePageForeground extends StatelessWidget {
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
-        color: Colors.lime[300],
+        color: limeYellow,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.25),
@@ -46,14 +48,16 @@ class HomePageForegroundChilds extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         HomePageTitles(),
-        SizedBox(height: 16),
+        spaceV16,
         HomePageButtons(),
-        SizedBox(height: 16),
+        spaceV16,
         HomePageFooter(),
       ],
     );
   }
 }
+
+
 
 
 

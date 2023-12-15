@@ -33,7 +33,7 @@ class SubSectionWidget extends StatelessWidget {
               fontWeight: FontWeight.bold,
               // color: Colors.white,
               // color: lightTeal,
-              color: teale,
+              color: teal,
             ),
           ),
           const SizedBox(height: 8.0),

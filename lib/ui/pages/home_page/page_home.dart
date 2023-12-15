@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/pages/home_page/widgets/page_home_foreground.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/images.dart';
 
 class PageHome extends StatelessWidget {
@@ -38,8 +39,8 @@ class HomePageBackground extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color.fromARGB(255, 128, 0, 30),
-            Color.fromARGB(255, 245, 72, 130),
+            darkMaroon,
+            lightMaroon,
           ], // Dark to light maroon
         ),
       ),

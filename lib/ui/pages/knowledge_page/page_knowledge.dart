@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/self_introduction_section.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/speak_word_section.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/spaces.dart';
 
 class PageKnowledge extends StatelessWidget {
   const PageKnowledge({super.key});
@@ -14,7 +15,7 @@ class PageKnowledge extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'KNOWLEDGE',
-          style: TextStyle(fontWeight: FontWeight.bold, color: lightYellowe),
+          style: TextStyle(fontWeight: FontWeight.bold, color: lightYellow),
         ),
         // backgroundColor: Colors.teal, // Teal color for app bar
         backgroundColor: maroon,
@@ -24,12 +25,8 @@ class PageKnowledge extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // SELF INTRODUCE SECTION
             SelfIntroduceSection(),
-
-            SizedBox(height: 8),
-
-            // SPEAK WORDS SECTION
+            spaceV8,
             SpeakWordSection(),
           ],
         ),
@@ -65,61 +62,61 @@ class PageKnowledge extends StatelessWidget {
 //   }
 // }
 
-class ImageListViewWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 100.0,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 1'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 2'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 3'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 4'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 5'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 6'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 7'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 8'),
-          ImageListItemWidget(
-              image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 9'),
-          // Add more ImageListItemWidget as needed
-        ],
-      ),
-    );
-  }
-}
+// class ImageListViewWidget extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       height: 100.0,
+//       child: ListView(
+//         scrollDirection: Axis.horizontal,
+//         children: [
+//           ImageListItemWidget(
+//               image: 'assets/images/applesample.jpeg', text: 'Image 1'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 2'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 3'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 4'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 5'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 6'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 7'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 8'),
+//           ImageListItemWidget(
+//               image: 'assets/images/speakeasyenglishlogo.png', text: 'Image 9'),
+//           // Add more ImageListItemWidget as needed
+//         ],
+//       ),
+//     );
+//   }
+// }
 
-class ImageListItemWidget extends StatelessWidget {
-  final String image;
-  final String text;
+// class ImageListItemWidget extends StatelessWidget {
+//   final String image;
+//   final String text;
 
-  ImageListItemWidget({required this.image, required this.text});
+//   ImageListItemWidget({required this.image, required this.text});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Image.asset(
-            image,
-            height: 60.0,
-            width: 60.0,
-            fit: BoxFit.cover,
-          ),
-          const SizedBox(height: 4.0),
-          Text(text),
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       margin: const EdgeInsets.all(8.0),
+//       child: Column(
+//         children: [
+//           Image.asset(
+//             image,
+//             height: 60.0,
+//             width: 60.0,
+//             fit: BoxFit.cover,
+//           ),
+//           const SizedBox(height: 4.0),
+//           Text(text),
+//         ],
+//       ),
+//     );
+//   }
+// }

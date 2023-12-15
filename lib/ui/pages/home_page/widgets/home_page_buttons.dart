@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/spaces.dart';
 
 class HomePageButtons extends StatelessWidget {
   const HomePageButtons({
@@ -12,13 +14,12 @@ class HomePageButtons extends StatelessWidget {
         HomePageOutlinedBtn(btnText: "BEGINNER"),
         HomePageOutlinedBtn(btnText: "INTERMEDIATE"),
         HomePageOutlinedBtn(btnText: "ADVANCED"),
-        SizedBox(height: 8),
+        spaceV8,
         HomePageElevatedBtn(),
       ],
     );
   }
 }
-
 
 class HomePageOutlinedBtn extends StatelessWidget {
   final String btnText;
@@ -30,28 +31,27 @@ class HomePageOutlinedBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var outlinedButton = OutlinedButton(
-        onPressed: () {},
-        style: OutlinedButton.styleFrom(
-          side: const BorderSide(
-            color: Color.fromARGB(255, 128, 0, 17),
-            width: 3,
-          ),
+      onPressed: () {},
+      style: OutlinedButton.styleFrom(
+        side: const BorderSide(
+          color: maroon,
+          width: 3,
         ),
-        child: Text(
-          btnText,
-          style: const TextStyle(
-            fontWeight: FontWeight.w900,
-            color: Color.fromARGB(255, 128, 0, 17),
-          ),
+      ),
+      child: Text(
+        btnText,
+        style: const TextStyle(
+          fontWeight: FontWeight.w900,
+          color: maroon,
         ),
-      );
+      ),
+    );
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: outlinedButton,
     );
   }
 }
-
 
 class HomePageElevatedBtn extends StatelessWidget {
   const HomePageElevatedBtn({
@@ -61,13 +61,12 @@ class HomePageElevatedBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var styleFrom = ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 128, 0,
-            17), // Same color as CONTINUE button
-      );
+      backgroundColor: maroon, // Same color as CONTINUE button
+    );
     var textStyle = TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.lime[300],
-        );
+      fontWeight: FontWeight.bold,
+      color: limeYellow,
+    );
     return ElevatedButton(
       onPressed: () {},
       style: styleFrom,

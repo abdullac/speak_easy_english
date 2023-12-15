@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_challenge_listview.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_content_text.dart';
-import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
+import 'package:speak_easy_english/ui/shared/widgets/content_text.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_level_buttons.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_section_title.dart';
+import 'package:speak_easy_english/ui/shared/widgets/section_title.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/widgets/samples_section.dart';
+import 'package:speak_easy_english/utils/constents/border_radius.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/paddings.dart';
+import 'package:speak_easy_english/utils/constents/spaces.dart';
 import 'package:speak_easy_english/utils/constents/strings.dart';
 
 class PageBeginner extends StatelessWidget {
@@ -15,31 +17,26 @@ class PageBeginner extends StatelessWidget {
   Widget build(BuildContext context) {
     var appBar2 = AppBar(
       title: const Text(
-        'Beginner',
-        style: TextStyle(color: Colors.white),
+        'BEGINNER',
+        style: TextStyle(
+          color: lightYellow,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-      backgroundColor: appBarColor, // Maroon shade
+      backgroundColor: maroon, // Maroon shade
     );
     return Scaffold(
+      backgroundColor: lightYellow,
       appBar: appBar2,
       body: const SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
+        padding: paddingAll8,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // LEVELS Section
             LevelsSection(),
-
-            SizedBox(
-              height: 12,
-            ),
-            // SAMPLES Section
+            spaceV12,
             SamplesSection(),
-
-            SizedBox(
-              height: 12,
-            ),
-            // CHALLENGE Section
+            spaceV12,
             ChallangeSection(),
           ],
         ),
@@ -70,10 +67,10 @@ class LevelsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8),
+      padding: paddingAll8,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: const Color.fromARGB(255, 255, 221, 221),
+        borderRadius: borderRadius12,
+        color: lightMaroon,
       ),
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,10 +94,12 @@ class ChallangeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          color: Colors.teal,
-          // border: Border.all(color: appBarColor),
-          borderRadius: BorderRadius.all(Radius.circular(12))),
+      padding: paddingAll4,
+      decoration: BoxDecoration(
+        color: lightTeal,
+        // border: Border.all(color: appBarColor),
+        borderRadius: borderRadius12,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

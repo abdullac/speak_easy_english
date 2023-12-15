@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-
+import 'package:speak_easy_english/utils/constents/colours.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -13,15 +12,15 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        bottom: 4.0,
-        left: 4,
+        bottom: 8.0,
       ),
       child: Text(
         title,
         style: const TextStyle(
-            fontSize: 24.0,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF800000)),
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+          color: maroon,
+        ),
       ),
     );
   }

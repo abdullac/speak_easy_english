@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/utils/constents/border_radius.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
 
 class ListItemImageTile extends StatelessWidget {
   final Image listItemImage;
@@ -12,10 +14,15 @@ class ListItemImageTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+      margin: const EdgeInsets.symmetric(
+        vertical: 8.0,
+        horizontal: 4.0,
+      ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        border: Border.all(color: const Color(0xFF800000)), // Maroon shade
+        borderRadius: borderRadius10,
+        border: Border.all(
+          color: maroon,
+        ), // Maroon shade
       ),
       child: Column(
         children: [
@@ -26,7 +33,7 @@ class ListItemImageTile extends StatelessWidget {
               image: const DecorationImage(
                   image: AssetImage('assets/images/applesample.jpeg'),
                   fit: BoxFit.cover),
-              borderRadius: BorderRadius.circular(10.0),
+              borderRadius: borderRadius10,
             ),
             // child: btnBgImg,
           ),

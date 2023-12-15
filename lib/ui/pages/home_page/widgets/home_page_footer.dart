@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/strings.dart';
 
 class HomePageFooter extends StatelessWidget {
@@ -8,8 +9,8 @@ class HomePageFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textStyle = TextStyle(
-          color: Colors.teal[600],
+    var textStyle = const TextStyle(
+          color: teal,
           fontSize: 12,
         );
     return Padding(
