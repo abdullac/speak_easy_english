@@ -13,7 +13,7 @@ class IconButtonWithShadow extends StatelessWidget {
     return IconButton(
       icon: Icon(
         icon,
-        color: appBarColor,
+        color: lightGreyscale,
         shadows: const [
           Shadow(
             color: Colors.black,

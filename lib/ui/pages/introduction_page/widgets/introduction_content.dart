@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/strings.dart';
 
 class IntroductionPageContent extends StatelessWidget {
@@ -12,7 +13,7 @@ class IntroductionPageContent extends StatelessWidget {
       beginnerIntroductionContent,
       textAlign: TextAlign.center,
       style: TextStyle(
-        color: Colors.white70,
+        color: lightGreyscale,
       ),
     );
   }

@@ -26,12 +26,15 @@ class KnowledgeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style:
-          ButtonStyle(backgroundColor: MaterialStatePropertyAll(appBarColor)),
+      style: const ButtonStyle(
+        backgroundColor: MaterialStatePropertyAll(maroon),
+      ),
       onPressed: () {},
       child: Text(
         "KNOWLEDGE",
-        style: TextStyle(color: Colors.lime[300]),
+        style: TextStyle(
+          color: limeYellow,
+        ),
       ),
     );
   }
@@ -45,19 +48,20 @@ class GotoButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          side: BorderSide(
-            color: appBarColor,
-            width: 2,
-          ),
+      style: OutlinedButton.styleFrom(
+        side: const BorderSide(
+          color: maroon,
+          width: 2,
         ),
-        onPressed: () {},
-        child: Text(
-          "GO TO",
-          style: TextStyle(
-            color: appBarColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ));
+      ),
+      onPressed: () {},
+      child: const Text(
+        "GO TO",
+        style: TextStyle(
+          color: maroon,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/enums.dart';
 
 class MessageSide extends StatelessWidget {
@@ -11,8 +12,12 @@ class MessageSide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(chatMessageSide == ChatMessageSide.computerized
-        ? "Computerized"
-        : "You");
+    return Text(
+      chatMessageSide == ChatMessageSide.computerized ? "Computerized" : "You",
+      style: TextStyle(
+        color: chatMessageSide == ChatMessageSide.computerized ? maroon : teal,
+        fontSize: 10,
+      ),
+    );
   }
 }

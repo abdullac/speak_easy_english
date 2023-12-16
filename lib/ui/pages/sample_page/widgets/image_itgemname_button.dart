@@ -10,17 +10,22 @@ class ImageItemNameButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       style: ButtonStyle(
-          backgroundColor:
-              MaterialStatePropertyAll(appBarColor.withOpacity(0.5))),
+        backgroundColor: MaterialStatePropertyAll(
+          teal.withOpacity(0.5),
+        ),
+      ),
       onPressed: () {},
-      icon: const Icon(Icons.volume_up),
+      icon: const Icon(
+        Icons.volume_up,
+        color: lightYellow,
+      ),
       label: const Text(
         'Image Name',
         textAlign: TextAlign.center,
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 18.0,
-          color: Colors.white,
+          color: lightYellow,
         ),
       ),
     );

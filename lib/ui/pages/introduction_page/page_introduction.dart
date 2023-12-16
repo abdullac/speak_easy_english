@@ -3,20 +3,21 @@ import 'package:speak_easy_english/ui/pages/introduction_page/widgets/introducti
 import 'package:speak_easy_english/ui/pages/introduction_page/widgets/introduction_content.dart';
 import 'package:speak_easy_english/ui/pages/introduction_page/widgets/introduction_title.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
-import 'package:speak_easy_english/utils/constents/strings.dart';
+import 'package:speak_easy_english/utils/constents/paddings.dart';
+import 'package:speak_easy_english/utils/constents/spaces.dart';
 
 class PageIntroduction extends StatelessWidget {
   const PageIntroduction({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const boxDecoration = BoxDecoration(
+    var boxDecoration = BoxDecoration(
       gradient: LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomLeft,
         colors: [
-          Color.fromARGB(255, 128, 0, 17),
-          Colors.lime,
+          maroon,
+          limeYellow,
         ], // Dark Maroon to Lime Yellow
       ),
     );
@@ -24,15 +25,15 @@ class PageIntroduction extends StatelessWidget {
       body: Container(
         decoration: boxDecoration,
         child: const Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: paddingAll8,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IntroductionPageTitle(),
-                SizedBox(height: 8),
+                spaceV8,
                 IntroductionPageContent(),
-                SizedBox(height: 16),
+                spaceV16,
                 IntroductionPageButtons()
               ],
             ),
