@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/content_text_widget.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/section_widget.dart';
+import 'package:speak_easy_english/ui/pages/speak_knowledge_page/page_speak_knowledge.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/paddings.dart';
 import 'package:speak_easy_english/utils/constents/spaces.dart';
@@ -47,7 +48,10 @@ class SelfIntroduceSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (builder) => const PageSpeakKnowledge()));
+                    },
                     icon: const Icon(
                       Icons.mic,
                       color: lightGreyscale,

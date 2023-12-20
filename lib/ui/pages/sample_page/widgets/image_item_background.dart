@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ImageItemBackground extends StatelessWidget {
+  final String bgImage;
   const ImageItemBackground({
     super.key,
+    required this.bgImage,
   });
 
   @override
   Widget build(BuildContext context) {
     return Positioned.fill(
-      child: Image.network(
-        'https://previews.123rf.com/images/kovalnadiya/kovalnadiya1906/kovalnadiya190600084/125525575-mango-tropical-fruit-on-a-dark-wooden-background-flat-lay-place-for-text-food-concept-vertical-image.jpg',
+      child: Image.asset(
+        bgImage,
         fit: BoxFit.cover,
       ),
     );

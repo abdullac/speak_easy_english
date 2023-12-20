@@ -22,6 +22,9 @@ class PageIntroduction extends StatelessWidget {
       ),
     );
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: maroon,
+      ),
       body: Container(
         decoration: boxDecoration,
         child: const Padding(

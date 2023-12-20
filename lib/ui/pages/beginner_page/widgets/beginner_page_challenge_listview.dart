@@ -3,6 +3,7 @@ import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
 import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_sub_title.dart';
 import 'package:speak_easy_english/utils/constents/border_radius.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/enums.dart';
 
 class ChallengeListView extends StatelessWidget {
   const ChallengeListView({
@@ -39,7 +40,7 @@ class ChallengeListView extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 3),
                 child: SubTitle(title: "Challenge ${index + 1}"),
               ),
-              ImageListView(),
+              ImageListView(onTapImageListView: OnTapImageListView.gotoChallangePage),
             ],
           ),
         );

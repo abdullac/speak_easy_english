@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/ui/pages/beginner_page/page_beginner.dart';
+import 'package:speak_easy_english/ui/pages/knowledge_page/page_knowledge.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 
 class IntroductionPageButtons extends StatelessWidget {
@@ -29,7 +31,10 @@ class KnowledgeButton extends StatelessWidget {
       style: const ButtonStyle(
         backgroundColor: MaterialStatePropertyAll(maroon),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (builder) => const PageKnowledge()));
+      },
       child: Text(
         "KNOWLEDGE",
         style: TextStyle(
@@ -54,7 +59,10 @@ class GotoButton extends StatelessWidget {
           width: 2,
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (builder) => const PageBeginner()));
+      },
       child: const Text(
         "GO TO",
         style: TextStyle(

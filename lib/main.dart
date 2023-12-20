@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const PageHome(),
-      home: const PageChallange(),
+      home: const PageHome(),
     );
   }
 }

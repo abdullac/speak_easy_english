@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
+import 'package:speak_easy_english/utils/constents/enums.dart';
 
 class SampleImageListview extends StatelessWidget {
   const SampleImageListview({
@@ -21,7 +22,9 @@ class SampleImageListview extends StatelessWidget {
             )
           ],
         ),
-        child: ImageListView(),
+        child: ImageListView(
+          onTapImageListView: OnTapImageListView.gotoSamplesPage,
+        ),
       ),
     );
   }

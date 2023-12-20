@@ -4,6 +4,7 @@ import 'package:speak_easy_english/ui/shared/widgets/image_listview.dart';
 import 'package:speak_easy_english/ui/shared/widgets/section_title.dart';
 import 'package:speak_easy_english/utils/constents/border_radius.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
+import 'package:speak_easy_english/utils/constents/enums.dart';
 import 'package:speak_easy_english/utils/constents/paddings.dart';
 import 'package:speak_easy_english/utils/constents/strings.dart';
 
@@ -34,7 +35,9 @@ class SamplesSection extends StatelessWidget {
           ContentText(
             text: beginnerSamplesContent,
           ),
-          ImageListView(),
+          ImageListView(
+              onTapImageListView: OnTapImageListView.gotoSamplesPage,
+              itemText: "text"),
         ],
       ),
     );

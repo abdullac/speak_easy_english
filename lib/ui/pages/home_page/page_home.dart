@@ -39,7 +39,8 @@ class HomePageBackground extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            darkMaroon,
+            // darkMaroon,
+            maroon,
             lightMaroon,
           ], // Dark to light maroon
         ),

@@ -1,4 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/ui/pages/beginner_page/page_beginner.dart';
+import 'package:speak_easy_english/ui/pages/introduction_page/page_introduction.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/spaces.dart';
 
@@ -9,13 +13,31 @@ class HomePageButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        HomePageOutlinedBtn(btnText: "BEGINNER"),
-        HomePageOutlinedBtn(btnText: "INTERMEDIATE"),
-        HomePageOutlinedBtn(btnText: "ADVANCED"),
+        HomePageOutlinedBtn(
+          btnText: "BEGINNER",
+          onBtnPressed: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (builder) => const PageIntroduction()));
+          },
+        ),
+        HomePageOutlinedBtn(
+          btnText: "INTERMEDIATE",
+          onBtnPressed: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (builder) => const PageIntroduction()));
+          },
+        ),
+        HomePageOutlinedBtn(
+          btnText: "ADVANCED",
+          onBtnPressed: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (builder) => const PageIntroduction()));
+          },
+        ),
         spaceV8,
-        HomePageElevatedBtn(),
+        const HomePageElevatedBtn(),
       ],
     );
   }
@@ -23,15 +45,19 @@ class HomePageButtons extends StatelessWidget {
 
 class HomePageOutlinedBtn extends StatelessWidget {
   final String btnText;
+  final void Function()? onBtnPressed;
   const HomePageOutlinedBtn({
     super.key,
     required this.btnText,
+    required this.onBtnPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     var outlinedButton = OutlinedButton(
-      onPressed: () {},
+      onPressed: 
+        onBtnPressed
+      ,
       style: OutlinedButton.styleFrom(
         side: const BorderSide(
           color: maroon,
