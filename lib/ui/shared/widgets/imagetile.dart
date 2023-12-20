@@ -30,11 +30,28 @@ class ListItemImageTile extends StatelessWidget {
                     )))
             : onTapImageListView == OnTapImageListView.gotoChallangePage
                 ? Navigator.of(context).push(MaterialPageRoute(
-                    builder: (builder) => const PageChallange()))
+                    builder: (builder) => const PageChat(
+                          chatPageTitle: 'Chat with Me',
+                          chatPageSubTitle: "You can speak to me",
+                        )))
                 : onTapImageListView ==
-                        OnTapImageListView.gotoSpeakKnowledgePage
+                        OnTapImageListView.gotoMalayalamWordsKnowledgePage
                     ? Navigator.of(context).push(MaterialPageRoute(
-                        builder: (builder) => const PageSpeakKnowledge()))
+                        // builder: (builder) => const PageSpeakKnowledge(),
+                        builder: (builder) => const PageChat(
+                          chatPageTitle: "Speak Words",
+                          chatPageSubTitle: "You can speak some Malayalam words to me ",
+                        ),
+                      ))
+                    : onTapImageListView ==
+                        OnTapImageListView.gotoEnglishWordsKnowledgePage
+                    ? Navigator.of(context).push(MaterialPageRoute(
+                        // builder: (builder) => const PageSpeakKnowledge(),
+                        builder: (builder) => const PageChat(
+                          chatPageTitle: "Speak Words",
+                          chatPageSubTitle: "You can speak some English words to me ",
+                        ),
+                      ))
                     : null;
       },
       child: Container(

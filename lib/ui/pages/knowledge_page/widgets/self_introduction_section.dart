@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speak_easy_english/ui/pages/challange_page/page_challange.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/content_text_widget.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/section_widget.dart';
 import 'package:speak_easy_english/ui/pages/speak_knowledge_page/page_speak_knowledge.dart';
@@ -50,7 +51,12 @@ class SelfIntroduceSection extends StatelessWidget {
                   ElevatedButton.icon(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (builder) => const PageSpeakKnowledge()));
+                        // builder: (builder) => const PageSpeakKnowledge(),
+                        builder: (builder) => const PageChat(
+                          chatPageTitle: "Self Introduce",
+                          chatPageSubTitle: "You can Introduce to me your self",
+                        ),
+                      ));
                     },
                     icon: const Icon(
                       Icons.mic,

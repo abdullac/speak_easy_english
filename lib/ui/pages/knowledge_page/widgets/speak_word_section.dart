@@ -29,7 +29,7 @@ class SpeakWordSection extends StatelessWidget {
             ),
             // ImageListViewWidget(),
             ImageListView(
-                onTapImageListView: OnTapImageListView.gotoSpeakKnowledgePage,
+                onTapImageListView: OnTapImageListView.gotoMalayalamWordsKnowledgePage,
                 itemText: "Sample Text"),
           ],
         ),
@@ -46,7 +46,7 @@ class SpeakWordSection extends StatelessWidget {
             ),
             // ImageListViewWidget(),
             ImageListView(
-                onTapImageListView: OnTapImageListView.gotoSpeakKnowledgePage,
+                onTapImageListView: OnTapImageListView.gotoEnglishWordsKnowledgePage,
                 itemText: "Text"),
           ],
         ),

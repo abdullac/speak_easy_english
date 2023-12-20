@@ -7,5 +7,8 @@ enum OnTapImageListView {
   gotoSamplesPage,
   gotoChallangePage,
   gotoPracticePage,
-  gotoSpeakKnowledgePage,
+  // gotoSpeakKnowledgePage,
+  gotoSelfIntroduceKnowledgePage,
+  gotoMalayalamWordsKnowledgePage,
+  gotoEnglishWordsKnowledgePage,
 }

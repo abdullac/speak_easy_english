@@ -5,8 +5,14 @@ import 'package:speak_easy_english/ui/shared/widgets/icon_buttonwith_shadow.dart
 import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/enums.dart';
 
-class PageChallange extends StatelessWidget {
-  const PageChallange({super.key});
+class PageChat extends StatelessWidget {
+  final String chatPageTitle;
+  final String chatPageSubTitle;
+  const PageChat({
+    super.key,
+    required this.chatPageTitle,
+    required this.chatPageSubTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,18 +20,18 @@ class PageChallange extends StatelessWidget {
       backgroundColor: lightYellow,
       appBar: AppBar(
         backgroundColor: maroon,
-        title: const Text(
-          'Chat with Me',
-          style: TextStyle(
+        title: Text(
+          chatPageTitle,
+          style: const TextStyle(
             color: lightYellow,
             fontWeight: FontWeight.bold,
           ),
         ),
-        bottom: const PreferredSize(
-          preferredSize: Size(double.infinity, 5),
+        bottom: PreferredSize(
+          preferredSize: const Size(double.infinity, 5),
           child: Text(
-            "You can speak to me",
-            style: TextStyle(
+            chatPageSubTitle,
+            style: const TextStyle(
               color: lightGreyscale,
             ),
           ),
@@ -63,16 +69,32 @@ class PageChallange extends StatelessWidget {
       ),
       child: IconTheme(
         data: const IconThemeData(color: maroon),
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: const Row(
-            children: [
-              IconButtonWithShadow(icon: Icons.mic),
-              ChatTextField(),
-              IconButtonWithShadow(icon: Icons.send),
-              IconButtonWithShadow(icon: Icons.volume_up),
-            ],
-          ),
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButtonWithShadow(icon: Icons.volume_up),
+                  ChatTextField(),
+                  IconButtonWithShadow(icon: Icons.mic),
+                  IconButtonWithShadow(icon: Icons.mic_off),
+                ],
+              ),
+            ),
+            // Container(
+            //   margin: const EdgeInsets.symmetric(horizontal: 8.0),
+            //   child: const Row(
+            //     children: [
+            //       IconButtonWithShadow(icon: Icons.mic),
+            //       ChatTextField(),
+            //       IconButtonWithShadow(icon: Icons.send),
+            //       IconButtonWithShadow(icon: Icons.volume_up),
+            //     ],
+            //   ),
+            // ),
+          ],
         ),
       ),
     );
