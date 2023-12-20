@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/page_beginner.dart';
+import 'package:speak_easy_english/ui/pages/main_page/page_main.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/page_knowledge.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 
 class IntroductionPageButtons extends StatelessWidget {
+  final String mainPageTitle;
   const IntroductionPageButtons({
     super.key,
+    required this.mainPageTitle,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        KnowledgeButton(),
-        GotoButton(),
+        const KnowledgeButton(),
+        GotoButton(mainPageTitle: mainPageTitle),
       ],
     );
   }
@@ -46,8 +48,10 @@ class KnowledgeButton extends StatelessWidget {
 }
 
 class GotoButton extends StatelessWidget {
+  final String mainPageTitle;
   const GotoButton({
     super.key,
+    required this.mainPageTitle,
   });
 
   @override
@@ -60,8 +64,10 @@ class GotoButton extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (builder) => const PageBeginner()));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (builder) => PageMain(
+                  mainPageTitle: mainPageTitle,
+                )));
       },
       child: const Text(
         "GO TO",

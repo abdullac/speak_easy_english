@@ -7,7 +7,11 @@ import 'package:speak_easy_english/utils/constents/paddings.dart';
 import 'package:speak_easy_english/utils/constents/spaces.dart';
 
 class PageIntroduction extends StatelessWidget {
-  const PageIntroduction({super.key});
+  final String mainPageTitle;
+  const PageIntroduction({
+    super.key,
+    required this.mainPageTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,17 +31,19 @@ class PageIntroduction extends StatelessWidget {
       ),
       body: Container(
         decoration: boxDecoration,
-        child: const Padding(
+        child: Padding(
           padding: paddingAll8,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IntroductionPageTitle(),
+                const IntroductionPageTitle(),
                 spaceV8,
-                IntroductionPageContent(),
+                const IntroductionPageContent(),
                 spaceV16,
-                IntroductionPageButtons()
+                IntroductionPageButtons(
+                  mainPageTitle: mainPageTitle,
+                )
               ],
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/widgets/chat_message_box.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/widgets/chat_textfield.dart';
+import 'package:speak_easy_english/ui/pages/chat_page/widgets/chat_message_box.dart';
+import 'package:speak_easy_english/ui/pages/chat_page/widgets/chat_textfield.dart';
 import 'package:speak_easy_english/ui/pages/sample_page/widgets/sample_icon_buttons.dart';
 import 'package:speak_easy_english/ui/shared/widgets/icon_buttonwith_shadow.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';

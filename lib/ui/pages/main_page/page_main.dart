@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_challenge_listview.dart';
+import 'package:speak_easy_english/ui/pages/main_page/widgets/challenge_listview.dart';
 import 'package:speak_easy_english/ui/shared/widgets/content_text.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_level_buttons.dart';
+import 'package:speak_easy_english/ui/pages/main_page/widgets/level_buttons.dart';
 import 'package:speak_easy_english/ui/shared/widgets/section_title.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/samples_section.dart';
+import 'package:speak_easy_english/ui/pages/main_page/widgets/samples_section.dart';
 import 'package:speak_easy_english/utils/constents/border_radius.dart';
 import 'package:speak_easy_english/utils/constents/colours.dart';
 import 'package:speak_easy_english/utils/constents/paddings.dart';
 import 'package:speak_easy_english/utils/constents/spaces.dart';
 import 'package:speak_easy_english/utils/constents/strings.dart';
 
-class PageBeginner extends StatelessWidget {
-  const PageBeginner({super.key});
+class PageMain extends StatelessWidget {
+  final String mainPageTitle;
+  const PageMain({
+    super.key,
+    required this.mainPageTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
     var appBar2 = AppBar(
-      title: const Text(
-        'BEGINNER',
+      title: Text(
+        mainPageTitle,
         style: TextStyle(
           color: lightYellow,
           fontWeight: FontWeight.bold,

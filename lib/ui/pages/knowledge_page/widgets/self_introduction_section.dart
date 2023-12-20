@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/page_challange.dart';
+import 'package:speak_easy_english/ui/pages/chat_page/page_chat.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/content_text_widget.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/widgets/section_widget.dart';
 import 'package:speak_easy_english/ui/pages/speak_knowledge_page/page_speak_knowledge.dart';

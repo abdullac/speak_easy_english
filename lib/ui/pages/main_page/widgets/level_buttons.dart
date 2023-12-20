@@ -1,5 +1,5 @@
   import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/widgets/beginner_page_outlined_button.dart';
+import 'package:speak_easy_english/ui/pages/main_page/widgets/outlined_button.dart';
 
 
 

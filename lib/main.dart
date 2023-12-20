@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speak_easy_english/ref.dart';
-import 'package:speak_easy_english/ui/pages/beginner_page/page_beginner.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/page_challange.dart';
+import 'package:speak_easy_english/ui/pages/main_page/page_main.dart';
+import 'package:speak_easy_english/ui/pages/chat_page/page_chat.dart';
 import 'package:speak_easy_english/ui/pages/home_page/page_home.dart';
 import 'package:speak_easy_english/ui/pages/knowledge_page/page_knowledge.dart';
 import 'package:speak_easy_english/ui/pages/sample_page/page_sample.dart';

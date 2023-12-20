@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/widgets/chat_message.dart';
-import 'package:speak_easy_english/ui/pages/challange_page/widgets/message_side.dart';
+import 'package:speak_easy_english/ui/pages/chat_page/widgets/chat_message.dart';
+import 'package:speak_easy_english/ui/pages/chat_page/widgets/message_side.dart';
 import 'package:speak_easy_english/utils/constents/enums.dart';
 
 class ChatMessageBox extends StatelessWidget {
